@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="C:\Users\Ben\Documents\Coding\Backroll App\node_modules\bootstrap\dist\css\bootstrap.css">
+    <meta charset="UTF-8">
+    <title>BackBone Tutorial Blogroll App</title>
+</head>
+<body>
+    <div class = "container">
+        <h1>BackBone Tutorial Blogroll App</h1>
+        <table class="table"> <!-- table.table>thead>tr>th*4 for faster input -->
+            <thead>
+                <tr>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>URL</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><input class="form-control author-input"></td>
+                    <td><input class="form-control title-input"></td>
+                    <td><input class="form-control url-input"></td>
+                    <td><burron class="btn btn-primary add-blog">Add</button></td>
+                </tr>
+            </thead>
+            <tbody class="blogs-list"></tbody>
+        </table>
+    </div>
+
+    <!-- template for individual blogs-->
+    <script type = "text/template" class="blogs-list-template">
+        <td><span class="author"><%= author %></span></td>
+        <td><span class="title"><%= title %></span></td>
+        <td><span class="url"><%= url %></span></td>
+        <td><button class="btn btn-warning edit-blog">Edit</button>
+            <button class="btn btn-warning delete-blog">Delete</button> <!-- btn-warning makes them yellow, succes green and danger red -->
+            <button class="btn btn-success update-blog" style = "display:none">Update</button> <!-- at first we want them to be hidden so we make that property-->
+            <button class="btn btn-danger cancel-blog" style = "display:none">Cancel</button> 
+        </td>
+    </script>
+
+    <script src="C:\Users\Ben\Documents\Coding\Backroll App\node_modules\jquery\dist\jquery.js"></script>
+    <script src="C:\Users\Ben\Documents\Coding\Backroll App\node_modules\underscore\underscore.js"></script>
+    <script src="C:\Users\Ben\Documents\Coding\Backroll App\node_modules\backbone\backbone.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
